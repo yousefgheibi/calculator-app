@@ -9,7 +9,9 @@
 </head>
 <body>
 
-<div id="calculator">
+    <input type="button" id="theme-switcher" value="Change theme"></input>
+
+    <div id="calculator">
     <header>
         <label id="previous"></label>
         <div id="current">
@@ -43,7 +45,20 @@
     </div>
 </div>
 
-<script src="assets/main.js"></script>
+    <script src="assets/main.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.documentElement.setAttribute("data-theme", "neon");
+        var themeSwitcher = document.getElementById("theme-switcher");
+        themeSwitcher.onclick = function() {
+            var currentTheme = document.documentElement.getAttribute("data-theme");
+            var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+            var switchToThemeNeo = currentTheme === "neon" ? "light" : "neon"
+            document.documentElement.setAttribute("data-theme", switchToTheme);
+        }
+    });
+</script>
 
 </body>
 </html>

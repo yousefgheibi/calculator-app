@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700");
 :root {
-  --header-bg: #93e993;
+  --header-bg: #dbcf23;
   --header-color: #000000;
   --main-bg: #ece3e3;
-  --operators-bg: #93e993;
-  --operators-bg-hover: #1dbb1d;
+  --operators-bg: #dbcf23;
+  --operators-bg-hover: #aea71e;
   --all-btn-bg: #ece3e3;
   --all-btn-hover: #d3d3d3;
   --body-bg: #d2d8d8;
@@ -12,9 +12,21 @@
   --label-text: #111;
 }
 
+[data-theme="dark"] {
+  --header-bg: #111;
+  --header-color: white;
+  --main-bg: rgb(192, 187, 187);
+  --operators-bg: rgb(114, 112, 112);
+  --operators-bg-hover: rgb(65 ,59 ,59);
+  --all-btn-bg: rgb(192, 187, 187);
+  --all-btn-hover: #d3d3d3;
+  --body-bg: #333;
+  --box-shadow: 10px 10px 48px #232323, -10px -10px 48px #23222085;
+  --label-text: #fff;
+}
+
 body {
   margin: 0;
-  padding-top: 3.2rem;
   font-size: 18px;
   font-family: "Roboto Mono";
   background: var(--body-bg);
